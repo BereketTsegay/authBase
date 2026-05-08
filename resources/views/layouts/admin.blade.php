@@ -53,7 +53,70 @@
                     <span>Permissions</span>
                 </a>
                 @endcan
-                
+
+                @can('inventory.view')
+                <a href="{{ route('inventory.dashboard') }}" class="flex items-center gap-3 px-3 py-2 text-text-muted hover:text-white rounded-lg transition-all duration-200 hover:bg-primary/10 group">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V5a2 2 0 00-2-2H6a2 2 0 00-2 2v8m16 0l-8 8-8-8"/>
+                    </svg>
+                    <span>Inventory</span>
+                </a>
+                @endcan
+
+                @can('products.view')
+                <a href="{{ route('inventory.products.index') }}" class="flex items-center gap-3 px-3 py-2 text-text-muted hover:text-white rounded-lg transition-all duration-200 hover:bg-primary/10 group">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V5a2 2 0 00-2-2H6a2 2 0 00-2 2v8m16 0l-8 8-8-8"/>
+                    </svg>
+                    <span>Products</span>
+                </a>
+                @endcan
+
+                @can('warehouses.view')
+                <a href="{{ route('inventory.warehouses.index') }}" class="flex items-center gap-3 px-3 py-2 text-text-muted hover:text-white rounded-lg transition-all duration-200 hover:bg-primary/10 group">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9-4 9 4v11a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+                    </svg>
+                    <span>Warehouses</span>
+                </a>
+                @endcan
+
+                @can('suppliers.view')
+                <a href="{{ route('inventory.suppliers.index') }}" class="flex items-center gap-3 px-3 py-2 text-text-muted hover:text-white rounded-lg transition-all duration-200 hover:bg-primary/10 group">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 10-8 0 4 4 0 008 0zm-5 4h2m1 8H8a4 4 0 00-4 4h12a4 4 0 00-4-4z"/>
+                    </svg>
+                    <span>Suppliers</span>
+                </a>
+                @endcan
+
+                @can('purchases.view')
+                <a href="{{ route('inventory.purchases.index') }}" class="flex items-center gap-3 px-3 py-2 text-text-muted hover:text-white rounded-lg transition-all duration-200 hover:bg-primary/10 group">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a1 1 0 011-1h4a1 1 0 011 1v6m-4-12h.01M12 5h0M9 21h6"/>
+                    </svg>
+                    <span>Purchases</span>
+                </a>
+                @endcan
+
+                @can('sales.view')
+                <a href="{{ route('inventory.sales.index') }}" class="flex items-center gap-3 px-3 py-2 text-text-muted hover:text-white rounded-lg transition-all duration-200 hover:bg-primary/10 group">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Sales</span>
+                </a>
+                @endcan
+
+                @can('reports.inventory')
+                <a href="{{ route('inventory.reports.index') }}" class="flex items-center gap-3 px-3 py-2 text-text-muted hover:text-white rounded-lg transition-all duration-200 hover:bg-primary/10 group">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3v18h18"/>
+                    </svg>
+                    <span>Reports</span>
+                </a>
+                @endcan
+
                 @can('teams.view')
                 <a href="{{ route('teams.index') }}" class="flex items-center gap-3 px-3 py-2 text-text-muted hover:text-white rounded-lg transition-all duration-200 hover:bg-primary/10 group">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
